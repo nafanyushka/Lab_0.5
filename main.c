@@ -6,9 +6,12 @@ char* get_String();
 
 int main(){
 
-    char** a = (char**)malloc(sizeof(char*));
-    *a = get_String();
-    printf("%s", *a);
+    int strings = 0;
+    char* a = "!";
+    while(*a != '\0'){
+        a = get_String();
+        printf("%s\n", a);
+    };
     system("pause");
     return 0;
 }
@@ -34,4 +37,8 @@ char* get_String(){
         }
     }while(n > 0);
     return a;
+}
+
+char* reverse_words(char* string){
+    
 }
